@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Dónde termina el café colombiano?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="https://unpkg.com/scrollama"></script>
+</head>
+<body>
+  <div class="grain-layer"></div>
+  <canvas id="coffeeCanvas"></canvas>
+
+  <header class="hero">
+    <h1>¿Dónde termina el café colombiano?</h1>
+    <p class="subtitle">El viaje de un kilo de café desde una finca colombiana hasta una taza en el mundo.</p>
+    <p class="scroll-hint">Desliza para seguir el recorrido ↓</p>
+  </header>
+
+  <main>
+    <section class="intro-text">
+      <p>
+        Colombia produce café, sí. Pero ese dato se queda corto.
+        Detrás de un kilo hay familias, clima, precio, exportaciones y una cadena global que transforma el grano en valor.
+      </p>
+    </section>
+
+    <section class="scrolly" id="chapter-origin">
+      <figure class="sticky-viz">
+        <div class="chapter-label">Capítulo 1</div>
+        <h2>Dónde nace</h2>
+        <div id="originViz" class="viz"></div>
+      </figure>
+
+      <article>
+        <div class="step" data-step="origin-1">
+          <h3>El café colombiano no nace en un solo lugar.</h3>
+          <p>Se cultiva en más de 600 municipios y 22 departamentos cafeteros.</p>
+        </div>
+
+        <div class="step" data-step="origin-2">
+          <h3>Huila lidera la historia reciente.</h3>
+          <p>En 2025, Huila registró 2.523.904 sacos de 60 kg, equivalentes al 19,65% de la cosecha nacional.</p>
+        </div>
+
+        <div class="step" data-step="origin-3">
+          <h3>Pero el mapa cafetero es más grande.</h3>
+          <p>Antioquia, Tolima, Cauca y Santander también están entre los territorios con mayor aptitud cafetera del país.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="scrolly" id="chapter-value">
+      <figure class="sticky-viz">
+        <div class="chapter-label">Capítulo 2</div>
+        <h2>El kilo toma valor</h2>
+        <div id="valueViz" class="viz"></div>
+      </figure>
+
+      <article>
+        <div class="step" data-step="value-1">
+          <h3>El precio comienza en la finca.</h3>
+          <p>La FNC publicó el 4 de junio de 2026 un precio interno de referencia de $2.005.000 COP por carga de 125 kg de café pergamino seco.</p>
+        </div>
+
+        <div class="step" data-step="value-2">
+          <h3>Traducido a kilo, cambia la escala.</h3>
+          <p>Eso equivale a $16.040 COP por kg de café pergamino seco, antes de trilla, exportación, tostión y venta final.</p>
+        </div>
+
+        <div class="step" data-step="value-3">
+          <h3>Al salir del país, el café ya habla en dólares.</h3>
+          <p>En 2024, Colombia exportó café verde sin tostar ni descafeinar por US$3.393 millones y 647,9 millones de kg.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="scrolly" id="chapter-climate">
+      <figure class="sticky-viz">
+        <div class="chapter-label">Capítulo 3</div>
+        <h2>El clima decide</h2>
+        <div id="climateViz" class="viz"></div>
+      </figure>
+
+      <article>
+        <div class="step" data-step="climate-1">
+          <h3>El café también viaja por el clima.</h3>
+          <p>Esta visualización consulta NASA POWER para comparar temperatura y precipitación en zonas cafeteras.</p>
+        </div>
+
+        <div class="step" data-step="climate-2">
+          <h3>No es solo calor. Es equilibrio.</h3>
+          <p>La producción cafetera depende de lluvias, temperatura, altitud, floración, maduración y manejo agronómico.</p>
+        </div>
+
+        <div class="step" data-step="climate-3">
+          <h3>Cuando el clima cambia, la historia cambia.</h3>
+          <p>Las lluvias intensas o los periodos secos pueden afectar cosecha, calidad y tiempos de recolección.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="scrolly" id="chapter-world">
+      <figure class="sticky-viz">
+        <div class="chapter-label">Capítulo 4</div>
+        <h2>El viaje al mundo</h2>
+        <div id="worldViz" class="viz"></div>
+      </figure>
+
+      <article>
+        <div class="step" data-step="world-1">
+          <h3>El café sale de Colombia.</h3>
+          <p>En 2024, el principal destino del café verde colombiano fue Estados Unidos.</p>
+        </div>
+
+        <div class="step" data-step="world-2">
+          <h3>Después aparecen Europa, Canadá y Asia.</h3>
+          <p>Bélgica, Canadá, Alemania y Japón completan los principales destinos del café colombiano sin tostar ni descafeinar.</p>
+        </div>
+
+        <div class="step" data-step="world-3">
+          <h3>El viaje no termina en el puerto.</h3>
+          <p>En cada destino, el café puede tostarse, mezclarse, empacarse, venderse o convertirse en experiencia.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow">La taza final</p>
+      <h2>El café no termina en una taza.</h2>
+      <p>
+        Termina en una cadena donde cada decisión cambia su valor:
+        el clima, la finca, el beneficio, el precio interno, el puerto, el tostador, el mercado y la persona que finalmente lo toma.
+      </p>
+
+      <div class="method-box">
+        <h3>Fuentes</h3>
+        <ul>
+          <li>Precio interno: Federación Nacional de Cafeteros, publicación del 4 de junio de 2026.</li>
+          <li>Exportaciones: WITS / UN Comtrade, producto 090111, Colombia, 2024.</li>
+          <li>Contexto exportador: DANE y DIAN, estadísticas oficiales de comercio exterior.</li>
+          <li>Clima: NASA POWER API, datos meteorológicos por coordenadas.</li>
+          <li>Producción regional: Gobernación del Huila y referencias cafeteras oficiales.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Elaborado por Camila Camacho, Joseph Gallardo y Daniel Felipe Valencia.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
